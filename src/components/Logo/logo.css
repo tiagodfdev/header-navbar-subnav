@@ -5,4 +5,13 @@
     justify-content: center;
     width: 3rem;
     height: 3rem;
+    background-color: black;
+}
+.logoBox h1{
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }

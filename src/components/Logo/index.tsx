@@ -1,15 +1,13 @@
-import React, {FunctionComponent} from 'react';
+import React from 'react';
 import './logo.css'
 
-type LogoProps = {
-    imageUrl:string
-}
 
-const Logo:FunctionComponent<LogoProps> = (props)=>{
-    const { imageUrl } = props
+
+const Logo= ()=>{
+
     return(
         <div className='logoBox'>
-            <img src={imageUrl} alt=''/>
+            <h1>LOGO</h1>
         </div>
     )
 }
