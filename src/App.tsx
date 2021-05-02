@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import HeaderNav from './components/HeaderNav'
+import Logo from './components/Logo';
+import Routes from './routes'
+import { mainNavItens, subNavItens, urlLogo } from './commons/constants/headerConstants'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo imageUrl={urlLogo} />
+      <Router>
+        <HeaderNav choiced={mainNavItens[1]} mainNavItems={mainNavItens} subNavItems={subNavItens}  />
+        <Routes />
+      </Router>
     </div>
   );
 }
-
 export default App;

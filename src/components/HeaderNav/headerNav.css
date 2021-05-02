@@ -1,0 +1,88 @@
+.headerBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.headerBox li a{
+    text-decoration: none;
+    font-weight: 600;
+}
+.headerBox li a:link{
+    color: var(--color-text-itens);
+}
+.headerBox li a:visited{
+    color: var(--color-text-itens);
+}
+.headerBox nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.logoBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0rem
+}
+.mainNavigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 0.5rem;
+}
+.subNavigation{
+    display: flex;
+    flex-shrink: 0;
+    min-height: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    overflow: hidden;
+}
+.subNavigation li a{
+
+    display: flex;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    align-items: center;
+}
+.active li a{
+    display: flex;
+    position: relative;
+    height: 1rem;
+    overflow: hidden;
+    align-items: center;
+    animation-name: dropdownNav;
+    animation-duration: 0.2s;
+}
+.deactive li a{
+    display: flex;
+    position: relative;
+    height: 0rem;
+    overflow: hidden;
+    align-items: center;
+    animation-name: dropdownNavRev;
+    animation-duration: 0.2s;
+}
+
+
+@keyframes dropdownNav {
+    from{ height: 0rem; display: none;}
+    to{height: 1rem; display: flex;}
+}
+@keyframes dropdownNavRev {
+    from{ height: 1rem; display: flex;}
+    to{height: 0rem; display: none;}
+}
