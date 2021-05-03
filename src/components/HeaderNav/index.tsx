@@ -11,7 +11,7 @@ const Header:FunctionComponent<HeaderProps> = (props)=>{
     const location = useLocation()
 
     // IIFE below
-    const isStatusChanged = (()=>{
+    const currentClass = (()=>{
         let classNameReturned = String()
         const isCurrentChoiced = location.pathname.includes(props.choiced.toLowerCase())
         if (isCurrentChoiced){
@@ -45,7 +45,7 @@ const Header:FunctionComponent<HeaderProps> = (props)=>{
                     <ul className='mainNavigation'>
                         {mainNavigation}
                     </ul>
-                    <ul className={isStatusChanged}>
+                    <ul className={currentClass}>
                         {subNavigation}
                     </ul>
                 </nav>
